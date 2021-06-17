@@ -8,6 +8,7 @@ namespace GvasFormat.Serialization.UETypes
         public string Name;
         public string Type;
         public long ValueLength;
+        public long ValueAddress;
 
         public abstract void SerializeProp(BinaryWriter writer);
 

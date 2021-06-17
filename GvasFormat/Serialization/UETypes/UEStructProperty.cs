@@ -68,6 +68,9 @@ namespace GvasFormat.Serialization.UETypes
                 case "Quat":
                     result = new UEQuaternionStructProperty(reader);
                     break;
+                case "GameplayTagContainer":
+                    result = new UEGameplayTagContainerStructProperty(reader);
+                    break;
                 default:
                     result = new UEGenericStructProperty(reader);
                     break;

@@ -51,6 +51,7 @@ namespace GvasFormat.Serialization
             result.Name = name;
             result.Type = type;
             result.ValueLength = valueLength;
+            result.ValueAddress = reader.BaseStream.Position - valueLength;
             return result;
         }
 
