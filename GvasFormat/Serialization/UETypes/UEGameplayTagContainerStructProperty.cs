@@ -16,14 +16,12 @@ namespace GvasFormat.Serialization.UETypes
         {
             // valueLength starts here
             Count = reader.ReadInt32();
-            Console.WriteLine("UEGameplayTagContainer: count is " + Count);
             Items = new string[Count];
             for (int i = 0; i < Count; i++)
             {
                 var name = reader.ReadUEString();
                 Items[i] = name;
             }
-            Console.WriteLine("UEGameplayTagContainer: read in " + Count + " entries");
         }
 
         public override void SerializeStructProp(BinaryWriter writer)
